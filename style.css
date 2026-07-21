@@ -10,6 +10,7 @@
   --gray-lt: #8c8c8c;
   --line:    #000000;
   --line-lt: #dcdcdc;
+  --blue:    #5b7fa3;
 
   --font: 'Roboto', Arial, Helvetica, sans-serif;
   --maxw: 1150px;
@@ -191,6 +192,13 @@ section{padding:96px 0;}
 .feature-photo .signature .role{font-size:.8rem; letter-spacing:.08em; color:#c9c9c9; text-transform:uppercase;}
 
 /* servizi teaser / list */
+.section-head-row{
+  display:flex; justify-content:space-between; align-items:flex-end; gap:28px; flex-wrap:wrap;
+}
+.eyebrow-label{font-size:.95rem; color:var(--ink); margin:0 0 .4em;}
+.heading-blue{color:var(--blue); max-width:24ch; margin:0;}
+.btn-blue{background:var(--blue); border-color:var(--blue); color:#fff; white-space:nowrap;}
+.btn-blue:hover{background:#fff; color:var(--blue);}
 .link-more{
   text-decoration:underline; text-underline-offset:4px; font-weight:700; color:var(--ink);
 }
