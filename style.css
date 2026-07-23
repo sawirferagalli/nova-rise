@@ -520,3 +520,9 @@ footer.site-footer .wordmark {
   .hero{ height:100svh; min-height:100svh; }
   .page-content{ margin-top:100svh; }
 }
+
+/* fix: evita che l'effetto "rimbalzo" dello scroll mostri il video sotto il footer */
+html, body {
+  overscroll-behavior-y: none;
+  background:#fff;
+}
