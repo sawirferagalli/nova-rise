@@ -456,3 +456,29 @@ footer.site-footer .bottom{
 @media (prefers-reduced-motion: reduce){
   #splash{display:none;}
 }
+
+/* ---------- rifinitura professionale (design pass) ---------- */
+*{ -webkit-tap-highlight-color:transparent; }
+body{ text-rendering:optimizeLegibility; }
+h1,h2,h3,h4{ letter-spacing:-.015em; }
+p{ line-height:1.7; }
+
+::selection{ background:var(--blue); color:#fff; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline:2px solid var(--blue); outline-offset:3px;
+}
+
+.btn{ transition:background .25s ease, color .25s ease, border-color .25s ease, transform .15s ease; }
+.btn:active{ transform:scale(.97); }
+
+.site-header{ transition:box-shadow .35s ease; }
+.site-header.scrolled{ box-shadow:0 4px 24px rgba(0,0,0,.06); }
+
+nav.main-nav{ backdrop-filter:blur(10px); }
+
+footer.site-footer .wordmark{ letter-spacing:-.02em; }
+footer.site-footer a{ transition:color .2s ease; }
+
+.eyebrow-label{ position:relative; display:inline-flex; align-items:center; gap:10px; }
+.eyebrow-label::before{ content:""; width:20px; height:1px; background:var(--blue); display:inline-block; }
