@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const splash = document.getElementById('splash');
+  if (splash) {
+    if (sessionStorage.getItem('novaSplashSeen')) {
+      splash.remove();
+    } else {
+      sessionStorage.setItem('novaSplashSeen', '1');
+      setTimeout(() => {
+        splash.classList.add('hide');
+        setTimeout(() => splash.remove(), 900);
+      }, 1700);
+    }
+  }
+
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.main-nav');
   if (toggle && nav) {
