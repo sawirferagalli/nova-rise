@@ -493,3 +493,9 @@ footer.site-footer .wordmark {
   color:#ffffff !important;
   opacity:1 !important;
 }
+
+/* fix: sottotitolo schermata di benvenuto bianco */
+#splash .splash-sub {
+  color:#ffffff !important;
+  opacity:.85;
+}
