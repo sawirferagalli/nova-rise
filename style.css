@@ -482,3 +482,14 @@ footer.site-footer a{ transition:color .2s ease; }
 
 .eyebrow-label{ position:relative; display:inline-flex; align-items:center; gap:10px; }
 .eyebrow-label::before{ content:""; width:20px; height:1px; background:var(--blue); display:inline-block; }
+
+/* fix definitivo: tutto il testo del footer bianco, senza eccezioni */
+footer.site-footer,
+footer.site-footer h4,
+footer.site-footer p,
+footer.site-footer a,
+footer.site-footer .bottom,
+footer.site-footer .wordmark {
+  color:#ffffff !important;
+  opacity:1 !important;
+}
