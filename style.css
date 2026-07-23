@@ -526,3 +526,9 @@ html, body {
   overscroll-behavior-y: none;
   background:#fff;
 }
+
+/* fix: il footer deve sempre stare sopra il video fisso della hero */
+footer.site-footer{
+  position:relative;
+  z-index:3;
+}
