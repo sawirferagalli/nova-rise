@@ -343,17 +343,59 @@ footer.site-footer .bottom{
 /* ---------- servizi: griglia a card con icone ---------- */
 .services-section{background:#f5f5f5;}
 .services-section .section-head{text-align:center; max-width:none; margin:0 auto 3em;}
+.services-section .heading-blue{margin:0 auto; max-width:none;}
 .services-grid{
   display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
 }
 .service-card{
+  position:relative;
   background:#fff; padding:44px 30px; text-align:center;
   box-shadow:0 1px 3px rgba(0,0,0,.07);
+  overflow:hidden;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease, background .4s ease;
 }
-.service-card svg{width:52px; height:52px; color:var(--blue); margin:0 auto 22px; display:block;}
-.service-card p{color:var(--ink); margin:0; max-width:34ch; margin-left:auto; margin-right:auto;}
+.service-card svg{width:52px; height:52px; color:var(--blue); margin:0 auto 22px; display:block; transition:transform .5s cubic-bezier(.2,.8,.2,1);}
+.service-card p{color:var(--ink); margin:0; max-width:34ch; margin-left:auto; margin-right:auto; position:relative; z-index:1;}
 @media (max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:600px){.services-grid{grid-template-columns:1fr;}}
+
+/* 9 animazioni hover diverse, una per card */
+.service-card:nth-child(1):hover{ transform:translateY(-10px); box-shadow:0 24px 34px -20px rgba(0,0,0,.18); }
+
+.service-card:nth-child(2):hover svg{ transform:rotate(18deg) scale(1.12); }
+
+.service-card:nth-child(3):hover{ transform:scale(1.045); box-shadow:0 18px 30px -18px rgba(0,0,0,.16); }
+
+.service-card:nth-child(4){ border-bottom:3px solid transparent; }
+.service-card:nth-child(4):hover{ border-bottom-color:var(--blue); }
+.service-card:nth-child(4):hover svg{ transform:translateY(-4px); }
+
+.service-card:nth-child(5)::before{
+  content:""; position:absolute; inset:0; background:#eef3f8;
+  transform:scaleY(0); transform-origin:bottom; transition:transform .4s ease; z-index:0;
+}
+.service-card:nth-child(5):hover::before{ transform:scaleY(1); }
+
+.service-card:nth-child(6):hover svg{ animation:cardBounce .6s ease; }
+@keyframes cardBounce{
+  0%,100%{ transform:translateY(0); }
+  30%{ transform:translateY(-10px); }
+  55%{ transform:translateY(0); }
+  75%{ transform:translateY(-4px); }
+}
+
+.service-card:nth-child(7):hover{ transform:rotate(-1deg) scale(1.03); }
+
+.service-card:nth-child(8):hover svg{ animation:cardPulse 1s ease infinite; }
+@keyframes cardPulse{
+  0%,100%{ transform:scale(1); }
+  50%{ transform:scale(1.18); }
+}
+
+.service-card:nth-child(9){ transition:transform .4s ease, box-shadow .4s ease, background .4s ease, color .4s ease; }
+.service-card:nth-child(9):hover{ background:var(--dark); box-shadow:0 20px 32px -18px rgba(0,0,0,.3); }
+.service-card:nth-child(9):hover p{ color:#fff; }
+.service-card:nth-child(9):hover svg{ color:#fff; transform:scale(1.1); }
 
 /* ---------- splash screen di benvenuto ---------- */
 #splash{
