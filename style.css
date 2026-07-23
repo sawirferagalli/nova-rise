@@ -343,20 +343,22 @@ form.contact-form{display:grid; gap:1.7em;}
 
 /* ---------- footer ---------- */
 footer.site-footer{
-  background:var(--dark); color:#cfcfcf; padding:70px 0 30px;
+  background:var(--dark); color:#fff; padding:70px 0 30px;
 }
 footer.site-footer .foot-top{
   display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:40px; padding-bottom:44px;
-  border-bottom:1px solid #333; align-items:start;
+  border-bottom:1px solid rgba(255,255,255,.25); align-items:start;
 }
 footer.site-footer .wordmark{font-size:2rem; font-weight:700; color:#fff; line-height:1.05; margin:0;}
 footer.site-footer h4{
-  font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; color:#8a8a8a; margin-bottom:1em; font-weight:400;
+  font-size:.78rem; text-transform:uppercase; letter-spacing:.1em; color:#fff; opacity:.75; margin-bottom:1em; font-weight:700;
 }
-footer.site-footer p, footer.site-footer a{color:#cfcfcf; font-size:.92rem; text-decoration:none;}
-footer.site-footer a:hover{color:#fff; text-decoration:underline;}
+footer.site-footer p, footer.site-footer a{color:#fff; font-size:.92rem; text-decoration:none;}
+footer.site-footer p{opacity:.92;}
+footer.site-footer a{opacity:.92;}
+footer.site-footer a:hover{opacity:1; text-decoration:underline;}
 footer.site-footer .bottom{
-  display:flex; justify-content:space-between; padding-top:24px; font-size:.78rem; color:#777;
+  display:flex; justify-content:space-between; padding-top:24px; font-size:.78rem; color:#fff; opacity:.75;
   flex-wrap:wrap; gap:.5em;
 }
 @media (max-width:860px){footer.site-footer .foot-top{grid-template-columns:1fr 1fr; gap:32px;}}
