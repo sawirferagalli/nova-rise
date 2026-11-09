@@ -665,3 +665,6 @@ footer.site-footer{
   .opening-title em::after{animation:none; transform:scaleX(1);}
   .media-frame{animation:none; clip-path:inset(0 0 0 0 round 28px);}
 }
+
+/* foto team: inquadratura sul volto */
+.team-block .photo img{ object-position:50% 22%; }
